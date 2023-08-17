@@ -53,7 +53,7 @@ This app is used to manage events and attendees, to create event you need to aut
     <li>(GET)localhost:8000/events/124/attendees</li>
     <li>(DELETE)localhost:8000/events/49/attendees/2</li>
 </ul>
-<ul><h3>Attendees</h3>
+<ul><h3>Auth</h3>
     <li>(POST)localhost:8000/login</li>
     <li>(GET)localhost:8000/user</li>
     <li>(POST)localhost:8000/logout</li>
