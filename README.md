@@ -39,13 +39,24 @@ This app is used to manage events and attendees, to create event you need to aut
 
 
 <h1>REST API requests</h1>
-<ul>EVENTS
+<ul><h3>Events</h3>
     <li>(GET)localhost:8000/events</li>
     <li>(GET)localhost:8000/events/1</li>
     <li>(POST)localhost:8000/events</li>
     <li>(PUT)localhost:8000/events</li>
     <li>(DELETE)localhost:8000/events/1</li>
     <li>(GET)localhost:8000/events?include=user, attendees, attendees.user</li>
+</ul>
+<ul><h3>Attendees</h3>
+    <li>(POST)localhost:8000/events/1/attendees</li>
+    <li>(GET)localhost:8000/events/124/attendees/1</li>
+    <li>(GET)localhost:8000/events/124/attendees</li>
+    <li>(DELETE)localhost:8000/events/49/attendees/2</li>
+</ul>
+<ul><h3>Attendees</h3>
+    <li>(POST)localhost:8000/login</li>
+    <li>(GET)localhost:8000/user</li>
+    <li>(POST)localhost:8000/logout</li>
 </ul>
 
 
