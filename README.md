@@ -37,46 +37,18 @@ This app is used to manage events and attendees, to create event you need to aut
     <li>Rate Limiting using throttle</li>
 </ul>
 
-REST API requests
 
-<table>
-  <tr>
-    <th>Collection</th>
-      <th>Method</th>
-    <th>Action</th>
-    <th>Request</th>
-  </tr>
-  <tr>
-    <td>Events</td>
-      <td>GET</td>
-    <td>Get All Events</td>
-    <td>localhost:8000/events</td>
-  </tr>
-  <tr>
-    <td>Events</td>
-      <td>GET</td>
-    <td>Get Single Event</td>
-    <td>localhost:8000/events/1</td>
-  </tr>
-    <tr>
-    <td>Events</td>
-      <td>POST</td>
-    <td>Create an Event</td>
-    <td>localhost:8000/events</td>
-  </tr>
-    <tr>
-    <td>Events</td>
-      <td>DELETE</td>
-    <td>Delete an Event</td>
-    <td>localhost:8000/events/201</td>
-  </tr>
-    <tr>
-    <td>Events</td>
-      <td>DELETE</td>
-    <td>Delete an Event</td>
-    <td>localhost:8000/events/201</td>
-  </tr>
-</table>
+<h1>REST API requests</h1>
+<ul>EVENTS
+    <li>(GET)localhost:8000/events</li>
+    <li>(GET)localhost:8000/events/1</li>
+    <li>(POST)localhost:8000/events</li>
+    <li>(PUT)localhost:8000/events</li>
+    <li>(DELETE)localhost:8000/events/1</li>
+    <li>(GET)localhost:8000/events?include=user, attendees, attendees.user</li>
+</ul>
+
+
 
 To setup project run in CLI:
 
