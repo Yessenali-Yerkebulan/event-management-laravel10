@@ -7,7 +7,7 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## Task list laravel 10
+## Event Management REST API app Laravel 10
 
 Event Management REST API App
 This app is used to manage events and attendees, to create event you need to authenticate, attendees will be notified with email message 24 hours before event starts
@@ -25,14 +25,59 @@ This app is used to manage events and attendees, to create event you need to aut
     <li>CRUD</li>
     <li>Migrations</li>
     <li>Controllers</li>
-    <li>Authentication using Sanctum</li>
+    <li>Token based authentication using Sanctum</li>
     <li>REST API</li>
     <li>Notifications</li>
     <li>Queues</li>
     <li>Task Scheduling</li>
     <li>Sending Email</li>
-    
+    <li>Authorization with Gates</li>
+    <li>Authorization with Policies</li>
+    <li>Signing out</li>
+    <li>Rate Limiting using throttle</li>
 </ul>
+
+REST API requests
+
+<table>
+  <tr>
+    <th>Collection</th>
+      <th>Method</th>
+    <th>Action</th>
+    <th>Request</th>
+  </tr>
+  <tr>
+    <td>Events</td>
+      <td>GET</td>
+    <td>Get All Events</td>
+    <td>localhost:8000/events</td>
+  </tr>
+  <tr>
+    <td>Events</td>
+      <td>GET</td>
+    <td>Get Single Event</td>
+    <td>localhost:8000/events/1</td>
+  </tr>
+    <tr>
+    <td>Events</td>
+      <td>POST</td>
+    <td>Create an Event</td>
+    <td>localhost:8000/events</td>
+  </tr>
+    <tr>
+    <td>Events</td>
+      <td>DELETE</td>
+    <td>Delete an Event</td>
+    <td>localhost:8000/events/201</td>
+  </tr>
+    <tr>
+    <td>Events</td>
+      <td>DELETE</td>
+    <td>Delete an Event</td>
+    <td>localhost:8000/events/201</td>
+  </tr>
+</table>
+
 To setup project run in CLI:
 
 Clone Project:
