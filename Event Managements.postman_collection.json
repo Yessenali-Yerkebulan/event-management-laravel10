@@ -1,0 +1,454 @@
+{
+	"info": {
+		"_postman_id": "28277c20-bb2e-4da1-b728-74b4023c7bf8",
+		"name": "Event Managements",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18967754"
+	},
+	"item": [
+		{
+			"name": "Events",
+			"item": [
+				{
+					"name": "All Events",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}events",
+							"host": [
+								"{{BASE_URL}}events"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Single Event",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}events/1",
+							"host": [
+								"{{BASE_URL}}events"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create an Event",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"First event\",\r\n    \"start_time\":\"2023-07-01 15:00:00\",\r\n    \"end_time\":\"2023-07-01 16:00:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}events",
+							"host": [
+								"{{BASE_URL}}events"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete an Event",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Modified\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}events/201",
+							"host": [
+								"{{BASE_URL}}events"
+							],
+							"path": [
+								"201"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update an Event",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}events/56",
+							"host": [
+								"{{BASE_URL}}events"
+							],
+							"path": [
+								"56"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Load Event with user, attendees, attendees.user",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}events?include=user, attendees, attendees.user",
+							"host": [
+								"{{BASE_URL}}events"
+							],
+							"query": [
+								{
+									"key": "include",
+									"value": "user, attendees, attendees.user"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Attendees",
+			"item": [
+				{
+					"name": "Attend",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}events/1/attendees",
+							"host": [
+								"{{BASE_URL}}events"
+							],
+							"path": [
+								"1",
+								"attendees"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Event Attendee",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}events/124/attendees/1",
+							"host": [
+								"{{BASE_URL}}events"
+							],
+							"path": [
+								"124",
+								"attendees",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Event Attendees",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}events/124/attendees",
+							"host": [
+								"{{BASE_URL}}events"
+							],
+							"path": [
+								"124",
+								"attendees"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Unattend",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}events/49/attendees/2",
+							"host": [
+								"{{BASE_URL}}events"
+							],
+							"path": [
+								"49",
+								"attendees",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const json = JSON.parse(responseBody)\r",
+									"pm.environment.set(\"TOKEN\", json.token);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"lakin.justina@example.org\",\r\n    \"password\":\"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}login",
+							"host": [
+								"{{BASE_URL}}login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show User",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "grant_type",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "client_id",
+									"value": "yerkebulan-rest-api",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "yerkebulan",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "yerkebulan",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}user",
+							"host": [
+								"{{BASE_URL}}user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}logout",
+							"host": [
+								"{{BASE_URL}}logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
