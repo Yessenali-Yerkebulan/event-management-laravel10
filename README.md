@@ -105,3 +105,12 @@ php artisan migrate
 
 after migration command select yes option to create database schema
 
+run application:
+
+```sh
+
+php artisan serve
+
+```
+
+
